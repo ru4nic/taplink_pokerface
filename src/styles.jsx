@@ -2,19 +2,18 @@ import styled from 'styled-components';
 import image from './assets/img/IMG_2.jpg';
 
 /* Theme Colors */
-const background = '#EDEAE2';
-const textColor = '#2A1F1F';
+export const background = '#EDEAE2';
+const textColor = '#4A323F';
 const buttonColor = '#C25E5C';
-export const logoColor = '#2A1F1F';
+export const logoColor = '#4A323F';
 
 /* */
 export const Wrapper = styled.div`
-  background: ${background};
-
   width: 100%;
   min-height: 100vh;
+
   margin: 0;
-  padding: 5% 8%;
+  padding: 5vmin;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -22,6 +21,9 @@ export const Wrapper = styled.div`
   color: ${background};
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  @media (max-width: 450px) {
+    align-items: flex-start;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -29,11 +31,21 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-
   @media (max-width: 900px) {
     font-size: 0.8rem;
+    width: unset;
   }
-
+  @media (orientation: portrait) {
+    width: unset;
+  }
+  @media (orientation: landscape) {
+    width: 40%;
+    /* width: unset; */
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 50%;
+    /* width: unset; */
+  }
   @media (max-width: 450px) {
     font-size: 0.7rem;
   }
@@ -42,7 +54,7 @@ export const Container = styled.div`
 export const Image = styled.div`
   background-image: url(${image});
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   background-size: 140%;
   background-position: 55% 50%;
   border-radius: 0.7em;
@@ -68,10 +80,11 @@ export const Image = styled.div`
     z-index: 1;
   }
 `;
-export const Title = styled.h1`
-  font-size: 1.5em;
+export const Title = styled.h2`
+  font-size: 1.3em;
   font-style: normal;
   font-weight: 300;
+  line-height: 1.3;
   margin: 0 0 1em 0;
   text-align: center;
   color: ${textColor};

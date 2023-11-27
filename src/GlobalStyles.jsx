@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import { background } from './styles';
 const GlobalStyles = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -325,6 +325,9 @@ template {
 [hidden] {
   display: none;
 }
-
+#root {
+  background: ${background};
+  
+}
 `;
 export default GlobalStyles;
