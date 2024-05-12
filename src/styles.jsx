@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import image from './assets/img/IMG_2.jpg';
+import image from './assets/img/MRH_7470.jpg';
 
 /* Theme Colors */
 export const background = '#EDEAE2';
@@ -54,17 +54,17 @@ export const Container = styled.div`
 export const Image = styled.div`
   background-image: url(${image});
   width: 100%;
-  aspect-ratio: 16/9;
-  background-size: 140%;
-  background-position: 55% 50%;
+  aspect-ratio: 5000/3333;
+  background-size: 100%;
+  /* background-position: 55% 50%; */
   border-radius: 0.7em;
-  position: relative;
-  &:after {
+  /* position: relative; */
+  /* &:after {
     background-image: linear-gradient(
       45deg,
-      rgba(114, 97, 147, 0.25) 25%,
-      rgba(227, 123, 124, 0.25) 50%,
-      rgba(255, 228, 180, 0.25)
+      rgba(114, 97, 147, 0.05) 25%,
+      rgba(227, 123, 124, 0.05) 50%,
+      rgba(255, 228, 180, 0.05)
     );
     pointer-events: none;
     content: '';
@@ -78,7 +78,7 @@ export const Image = styled.div`
 
     box-shadow: 0 1px 10px #0000002e;
     z-index: 1;
-  }
+  } */
 `;
 export const Title = styled.h2`
   font-size: 1.3em;
